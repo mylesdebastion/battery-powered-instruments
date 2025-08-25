@@ -1,0 +1,21 @@
+{
+  "name": "battery-powered-instruments",
+  "version": "1.0.0",
+  "description": "Battery Powered Instruments Jam Session poster generator",
+  "main": "export-poster.js",
+  "scripts": {
+    "export": "node export-poster.js",
+    "install-browser": "npx playwright install chromium"
+  },
+  "keywords": [
+    "poster",
+    "instagram",
+    "social-media",
+    "screenshot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
