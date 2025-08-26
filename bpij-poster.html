@@ -215,6 +215,15 @@
             font-weight: 600;
         }
         
+        .highlight a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .highlight a:hover {
+            text-decoration: underline;
+        }
+        
         .gear-section {
             padding: 2vh;
             background: rgba(0,229,255,0.1);
@@ -308,6 +317,9 @@
             letter-spacing: 1px;
             animation: glow 2s ease-in-out infinite;
             flex-shrink: 0;
+            text-decoration: none;
+            display: block;
+            text-align: center;
         }
         
         /* CTA button - Target: ~100px */
@@ -431,7 +443,7 @@
             <div class="info-block">
                 <div class="info-line"><strong>When:</strong> First Wednesday of the month at noon • 90 minutes</div>
                 <div class="info-line"><strong>Cost:</strong> Sliding scale $10</div>
-                <div class="info-line"><span class="highlight">Free for CymaSpace Patreon members</span></div>
+                <div class="info-line"><a href="https://www.patreon.com/cymaspace" target="_blank" class="highlight">Free for CymaSpace Patreon members</a></div>
                 <div class="info-line"><strong>Perk:</strong> Members bring one friend free (first visit)</div>
                 <div class="info-line"><strong>Bonus:</strong> $1 off café drinks for all attendees</div>
             </div>
@@ -450,15 +462,14 @@
             
             <div class="footer">
                 <strong>Woodstock Café</strong><br>
+                4103 SE Woodstock Blvd, Portland, OR 97202<br>
                 Owned & operated by CymaSpace<br>
                 Nonprofit founded 2013 • Incorporated 2014<br>
-                <br>
-                <strong>Café Operations:</strong> Andre Gray (Board Member)<br>
             </div>
             
-            <div class="cta">
+            <a href="https://www.patreon.com/cymaspace" target="_blank" class="cta">
                 Join the jam
-            </div>
+            </a>
         </div>
     </div>
 </body>
