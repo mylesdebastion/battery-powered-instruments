@@ -5,7 +5,10 @@
   "main": "export-poster.js",
   "scripts": {
     "export": "node export-poster.js",
-    "install-browser": "npx playwright install chromium"
+    "install-browser": "npx playwright install chromium",
+    "sync": "cp bpij-poster.html index.html",
+    "export-all": "npm run sync && npm run export",
+    "watch": "node sync-watcher.js"
   },
   "keywords": [
     "poster",
