@@ -63,36 +63,6 @@ async function exportPoster() {
         console.log('✅ Screenshot saved to:', outputPath);
         console.log('📐 Dimensions: 1080x1920px (Instagram Story/Reel)');
         
-        // Also create a square version for Instagram feed
-        const squareFilename = `bpij-poster-square-${timestamp}.png`;
-        const squareOutputPath = path.join(__dirname, 'screenshots', squareFilename);
-        
-        // Adjust viewport for square format
-        await page.setViewportSize({
-            width: 1080,
-            height: 1080
-        });
-        
-        // Update styles for square format
-        await page.evaluate(() => {
-            const poster = document.querySelector('.poster');
-            if (poster) {
-                poster.style.height = '1080px';
-                poster.style.padding = '40px';
-            }
-        });
-        
-        await page.waitForTimeout(500);
-        
-        // Take square screenshot
-        await poster.screenshot({
-            path: squareOutputPath,
-            type: 'png'
-        });
-        
-        console.log('✅ Square version saved to:', squareOutputPath);
-        console.log('📐 Dimensions: 1080x1080px (Instagram Feed)');
-        
     } catch (error) {
         console.error('❌ Error during export:', error);
     } finally {
