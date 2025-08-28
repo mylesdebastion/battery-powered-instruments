@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battery Powered Instruments Jam Session</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Press+Start+2P&display=swap');
         
         * {
             margin: 0;
@@ -33,7 +33,7 @@
             max-height: calc(100vw * 1.7778);
             background: linear-gradient(145deg, #16213e 0%, #1a0b2e 30%, #0a0a0a 50%, #1a0b2e 70%, #16213e 100%);
             border: 2px solid #00E5FF;
-            padding: 3vh 2.5vh;
+            padding: 2vh 2.5vh;
             text-align: center;
             position: relative;
             overflow-y: auto;
@@ -48,7 +48,7 @@
             height: 1920px !important;
             max-width: 1080px !important;
             max-height: 1920px !important;
-            padding: 40px 50px; /* Reduced from 60px to save 40px */
+            padding: 30px 50px; /* Reduced padding for more text space */
             overflow: hidden;
         }
         
@@ -78,10 +78,10 @@
             gap: 1.5vh;
         }
         
-        /* Export content container - Available height: 1840px (1920 - 80px padding) */
+        /* Export content container - Available height: 1860px (1920 - 60px padding) */
         .export-mode .content {
-            height: 1840px;
-            gap: 15px;
+            height: 1860px;
+            gap: 12px;
             justify-content: space-between;
             flex-shrink: 0;
             display: flex;
@@ -117,7 +117,7 @@
         /* Presenter section - Target: ~120px */
         .export-mode .presenter {
             padding: 20px;
-            font-size: 28px;
+            font-size: 32px;
             flex-shrink: 0;
         }
         
@@ -129,7 +129,7 @@
         }
         
         .export-mode .presenter-name {
-            font-size: 32px;
+            font-size: 38px;
             margin-bottom: 8px;
         }
         
@@ -140,41 +140,50 @@
         }
         
         .export-mode .presenter-title {
-            font-size: 25px;
+            font-size: 28px;
         }
         
         h1 {
-            font-size: calc(4vh + 1vw);
-            font-weight: 900;
-            line-height: 1;
+            font-family: 'Press Start 2P', monospace;
+            font-size: calc(2.8vh + 0.6vw);
+            font-weight: 400;
+            line-height: 1.2;
             text-transform: uppercase;
-            letter-spacing: -1px;
+            letter-spacing: 0.5px;
             background: linear-gradient(135deg, #ffffff 0%, #00E5FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             flex-shrink: 0;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
         }
         
-        /* Main title - Target: ~180px */
+        /* Main title - Target: ~200px */
         .export-mode h1 {
-            font-size: 72px;
+            font-size: 38px;
             flex-shrink: 0;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
         
         .subtitle {
-            font-size: calc(2.2vh + 0.3vw);
-            color: #00E5FF;
-            font-weight: 600;
-            letter-spacing: 3px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: calc(2.2vh + 0.4vw);
+            font-weight: 400;
+            line-height: 1.2;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #00E5FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             flex-shrink: 0;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
         }
         
-        /* Subtitle - Target: ~60px */
+        /* Subtitle - Target: ~80px */
         .export-mode .subtitle {
-            font-size: 38px;
+            font-size: 28px;
             flex-shrink: 0;
         }
         
@@ -186,7 +195,7 @@
             flex-shrink: 0;
         }
         
-        /* Info block - Target: ~280px */
+        /* Info block - Target: ~300px */
         .export-mode .info-block {
             padding: 25px;
             border-left: 6px solid #00E5FF;
@@ -202,7 +211,7 @@
         
         .export-mode .info-line {
             margin: 12px 0;
-            font-size: 28px;
+            font-size: 32px;
         }
         
         .info-line strong {
@@ -231,7 +240,7 @@
             flex-shrink: 0;
         }
         
-        /* Gear section - Target: ~280px */
+        /* Gear section - Target: ~300px */
         .export-mode .gear-section {
             padding: 25px;
             flex-shrink: 0;
@@ -245,7 +254,7 @@
         }
         
         .export-mode .gear-title {
-            font-size: 32px;
+            font-size: 38px;
             margin-bottom: 15px;
         }
         
@@ -295,10 +304,10 @@
             flex-shrink: 0;
         }
         
-        /* Footer section - Target: ~200px */
+        /* Footer section - Target: ~220px */
         .export-mode .footer {
             padding-top: 25px;
-            font-size: 24px;
+            font-size: 28px;
             flex-shrink: 0;
         }
         
@@ -322,10 +331,10 @@
             text-align: center;
         }
         
-        /* CTA button - Target: ~100px */
+        /* CTA button - Target: ~110px */
         .export-mode .cta {
-            padding: 20px;
-            font-size: 32px;
+            padding: 22px;
+            font-size: 38px;
             flex-shrink: 0;
             margin-top: 0;
         }
@@ -434,11 +443,12 @@
             </div>
             
             <h1>Battery Powered Instruments</h1>
-            <div class="subtitle">JAM SESSION</div>
             
             <div class="logo-section">
                 <img src="bpij_graphic.png" alt="Battery Powered Instruments" class="logo-img">
             </div>
+            
+            <div class="subtitle">JAM SESSION</div>
             
             <div class="info-block">
                 <div class="info-line"><strong>When:</strong> October 1st 2025 12pm-1:30pm</div>
