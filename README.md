@@ -1,89 +1,111 @@
-# Battery Powered Instruments Jam Session Poster
+# Battery Powered Instruments Jam Session
 
-Interactive HTML poster for the Battery Powered Instruments Jam Session at CymaSpace's Woodstock Café.
+A monthly electronic music gathering at CymaSpace's Woodstock Café in Portland
 
-## Features
+🎹 **Live Event Info:** https://battery-powered-instruments.vercel.app
 
-- **Responsive Design**: Automatically adapts to any screen size while maintaining 9:16 aspect ratio
-- **Instagram-Ready Export**: Generate PNG images at 1080x1920px (Stories/Reels) and 1080x1080px (Feed)
-- **Modern CSS**: Uses viewport units and calc() for fluid scaling
-- **Export Script**: Automated screenshot generation using Playwright
+## What is BPIJ?
 
-## Files
+The Battery Powered Instruments Jam (BPIJ) is a monthly community gathering where electronic musicians connect their portable gear through a shared mixer for 90 minutes of collaborative sound exploration. Founded by Myles de Bastion at CymaSpace, this event celebrates experimental electronic music in an accessible, welcoming environment.
 
-- `bpij-poster.html` - Main poster HTML with responsive design
-- `bpij_graphic.png` - Logo graphic
-- `export-poster.js` - Node.js script for PNG export
-- `screenshots/` - Directory for exported images
+## Quick Links
 
-## Installation
+- **Event Website:** https://battery-powered-instruments.vercel.app
+- **Support on Patreon:** https://www.patreon.com/cymaspace
+- **CymaSpace:** https://cymaspace.org
 
-1. Install dependencies:
-```bash
-npm install
+## Event Details
+
+📅 **When:** Oct 1st Wednesday at noon (90 minutes)  
+📍 **Where:** Woodstock Café (operated by CymaSpace)  
+💵 **Cost:** Sliding scale $10 (Free for Patreon members)  
+🎧 **Bring:** Your battery-powered instrument + headphones  
+
+## About This Repository
+
+This repository contains the web presence for BPIJ, including:
+- Interactive event poster (responsive HTML)
+- Social media export tools for Instagram
+- Event documentation and budget planning
+
+### Project Structure
+
+```
+battery-powered-instruments/
+├── bpij-poster.html        # Main event poster (responsive design)
+├── index.html              # Vercel deployment version
+├── bpij_graphic.png        # Event logo/graphic
+├── export-poster.js        # Social media export script
+├── proposed_budget.md      # Event budget planning
+├── EVENT_OVERVIEW.md       # Public event description
+└── TECHNICAL_DOCS.md       # Technical documentation
 ```
 
-2. Install Chromium browser for Playwright:
+## For Musicians & Attendees
+
+### What to Bring
+- Battery-powered synthesizers, grooveboxes, drum machines
+- DIY electronic instruments
+- Headphones for monitoring
+- Creative energy!
+
+### What We Provide
+- Shared mixer for collaboration
+- Haptic devices (sometimes) for sensory experience
+- Welcoming community space
+- $1 off café drinks
+
+## For Website Developer
+
+### Quick Start
+
+1. Clone the repository:
 ```bash
+git clone https://github.com/mylesdebastion/battery-powered-instruments.git
+cd battery-powered-instruments
+```
+
+2. Install dependencies (for social media export):
+```bash
+npm install
 npm run install-browser
 ```
 
-## Usage
-
-### View in Browser
-Simply open `bpij-poster.html` in any web browser. The poster will automatically scale to fit your viewport.
+3. View the poster:
+- Open `bpij-poster.html` in your browser
+- Or visit https://battery-powered-instruments.vercel.app
 
 ### Export for Social Media
-Run the export script to generate Instagram-ready PNG images:
 
+Generate Instagram-ready images:
 ```bash
 npm run export
 ```
 
-Or directly:
+This creates:
+- `bpij-poster-[timestamp].png` - 1080x1920px (Stories/Reels)
+- `bpij-poster-square-[timestamp].png` - 1080x1080px (Feed)
 
-```bash
-node export-poster.js
-```
+## Contributing
 
-This will create two files in the `screenshots/` directory:
-- `bpij-poster-[timestamp].png` - 1080x1920px (Instagram Stories/Reels)
-- `bpij-poster-square-[timestamp].png` - 1080x1080px (Instagram Feed)
+We welcome contributions! Whether you're interested in:
+- Improving the web design
+- Adding new features
+- Helping with event organization
+- Creating promotional materials
 
-## Design Specifications
+Feel free to open an issue or submit a pull request.
 
-### Instagram Dimensions
-- **Stories/Reels**: 1080x1920px (9:16 aspect ratio)
-- **Feed Square**: 1080x1080px (1:1 aspect ratio)
-- **Feed Portrait**: 1080x1350px (4:5 aspect ratio)
+## About CymaSpace
 
-### Color Scheme
-- Primary: `#00E5FF` (Cyan)
-- Background: `#0f0f0f` (Near black)
-- Text: `#ffffff` (White)
-- Secondary: `#e0e0e0` (Light gray)
+CymaSpace is a 501(c)3 nonprofit dedicated to making arts accessible to all. Woodstock Café serves as our community hub for creative gatherings and artistic expression. Through grants and partnerships, we keep programs like BPIJ accessible to everyone.
 
-## Event Details
+## Connect
 
-- **What**: Battery Powered Instruments Jam Session
-- **When**: Wednesdays at noon (90 minutes)
-- **Where**: Woodstock Café (owned by CymaSpace)
-- **Cost**: Sliding scale $10 (Free for Patreon members)
-- **Bring**: Battery-powered gear and headphones
+- **Instagram:** #BatteryPoweredInstruments #BPIJ #CymaSpace
+- **Patreon:** https://www.patreon.com/cymaspace
+- **Website:** https://cymaspace.org
 
-## Development
+---
 
-The poster uses two display modes:
-1. **Responsive Mode**: Default view that scales with viewport
-2. **Export Mode**: Fixed dimensions for screenshot capture (activated by `.export-mode` class)
-
-### Customization
-
-To modify the poster content, edit the HTML structure in `bpij-poster.html`. The CSS uses:
-- Viewport units (vh/vw) for responsive scaling
-- Fixed pixel values in `.export-mode` for consistent social media output
-- CSS Grid and Flexbox for layout
-
-## License
-
-MIT
+*Join us for the next jam session and be part of Portland's electronic music community!*
